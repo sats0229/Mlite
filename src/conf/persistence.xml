@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="EliteShopPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>DAo.CustomerRegistration</class>
+    <class>DAo.Products</class>
+    <class>DAo.Admin</class>
+    <class>DAo.Cart</class>
+    <class>DAo.Orders</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/Online Shoping"/>
+      <property name="javax.persistence.jdbc.user" value="Owner"/>
+      <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+      <property name="javax.persistence.jdbc.password" value="sats"/>
+    </properties>
+  </persistence-unit>
+  <!--  <persistence-unit name="MliteShopPU" transaction-type="JTA">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <jta-data-source>MliteShop</jta-data-source>
+    <class>DAo.Admin</class>
+    <class>DAo.Cart</class>
+    <class>DAo.Products</class>
+    <class>DAo.CustomerRegistration</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://SIID:1433;databaseName=MliteShop"/>
+      <property name="javax.persistence.jdbc.user" value="sa"/>
+      <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <property name="javax.persistence.jdbc.password" value="sats"/>
+    <properties/>
+  </persistence-unit>-->
+</persistence>
